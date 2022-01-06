@@ -25,7 +25,6 @@ public class SalesManagerSalaryServlet extends HttpServlet {
         int bonus = data.get("bonus").getAsInt();
         int tCount = data.get("tCount").getAsInt();
 
-
         IEmployee employee = new SalesManager(baseSalary, bonus, tCount);
         DataStorage.addEmployee(employee);
 
