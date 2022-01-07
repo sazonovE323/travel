@@ -20,17 +20,18 @@ import java.text.SimpleDateFormat;
 public class EngineerSalaryServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        // get request from client
         req.setCharacterEncoding("UTF-8");
         JsonObject data = new Gson().fromJson(req.getReader(), JsonObject.class);
-
         int baseSalary = data.get("baseSalary").getAsInt();
         int bonus = data.get("bonus").getAsInt();
 
+        // create new Employee as Engineer and add it to storage
         IEmployee employee = new Engineer(baseSalary, bonus);
         DataStorage.addEmployee(employee);
 
+        // form response and send it
         String answer = employee.getSalary() + "";
-
         resp.setContentType("text/plain");
         resp.setCharacterEncoding("UTF-8");
         resp.getWriter().write(answer);

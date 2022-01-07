@@ -11,6 +11,7 @@ public class EngineerTest {
     @Test
     public void getSalary() {
         engineer = new Engineer(30000, 20000);
+        // Engineer salary: base salary + prize = 30000 + 20000 = 50000;
         assertEquals(50000, engineer.getSalary());
     }
 }

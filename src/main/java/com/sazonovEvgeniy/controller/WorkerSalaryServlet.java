@@ -18,19 +18,19 @@ import java.io.IOException;
 public class WorkerSalaryServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        // get request from client
         req.setCharacterEncoding("UTF-8");
         JsonObject data = new Gson().fromJson(req.getReader(), JsonObject.class);
-
         int rate = data.get("rate").getAsInt();
         int hours = data.get("hours").getAsInt();
         int overtimeHours = data.get("oHours").getAsInt();
 
-
+        // create new Employee as Worker and add it to storage
         IEmployee employee = new Worker(rate, hours, overtimeHours);
         DataStorage.addEmployee(employee);
 
+        // form response and send it
         String answer = employee.getSalary() + "";
-
         resp.setContentType("text/plain");
         resp.setCharacterEncoding("UTF-8");
         resp.getWriter().write(answer);

@@ -18,6 +18,7 @@
 </head>
 <body>
     <div class="container">
+        <!-- Engineer block -->
         <div class="row">
             <div class="col">
                 <h4 class="mb-4 mt-2">
@@ -40,6 +41,7 @@
                 </div>
             </div>
         </div>
+        <!-- Worker block -->
         <div class="row">
             <div class="col">
                 <h4 class="mb-4 mt-2">
@@ -67,6 +69,7 @@
                 </div>
             </div>
         </div>
+        <!-- Sales Manager block -->
         <div class="row">
             <div class="col">
                 <h4 class="mb-4 mt-2">
