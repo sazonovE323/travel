@@ -52,11 +52,11 @@
                     </div>
                     <div class="col">
                         <label for="WorkerHours">Часы:</label>
-                        <input type="number" placeholder="900" class="form-control" id="WorkerHours">
+                        <input type="number" placeholder="160" class="form-control" id="WorkerHours">
                     </div>
                     <div class="col">
                         <label for="WorkerOvertimeHours">Сверхурочные часы:</label>
-                        <input type="number" placeholder="100" class="form-control" id="WorkerOvertimeHours">
+                        <input type="number" placeholder="40" class="form-control" id="WorkerOvertimeHours">
                     </div>
 
                     <button onclick ="calculateWorkerSalary()" class="button_style">Рассчитать</button>
